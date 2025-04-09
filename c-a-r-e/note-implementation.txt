@@ -1,0 +1,60 @@
+media querys
+page: 730, 520
+
+Main Frame // simple, soft but secure. Vivid enough to capitivate interest both mindwise and actionwise
+
+Quick Acess Menu
+
+// must catch attention
+Logo+slogan
+
+Quick demonstration and explanation of branches
+Images that support to envision what's being said
+
+
+Main Frame -> Sobre
+
+C.A.R.E. Definition Draft
+Why the idea?
+From where(local) it came
+
+
+Self CARE Main page // soft. darker when heavy topics.  Lighter color schemes
+#EAE6C9, #DBD387, #615B25
+#ACCED7, #79C6DB, #2C7C8F
+#A28ED7, #6246AE, #230D5F
+#DCB7C9, #DA83AF, #5C2140
+Relationship CARE Main Page // more vivid, passionate. Change tonality for thoughtfull topics and action dinamic topics
+Habitual CARE Main Page // grounded, sharp, serious, not to serious, tone. Focus on progression, changes to enphasize that
+
+Quick Acess Menu
+
+Presentation home
+CTA to guide the beggining of the process OR Register
+
+
+Functions:
+
+Account Registration/Log in
+Account Management
+
+First Survey
+Sub-sequent surveys
+
+Self:
+Quick day-tip
+Planning
+Reflection prompt of the day
+Daily/Weekly challenges
+Weekly Topic of Discussion
+
+Relationship:
+Quick day-tip
+Planning
+Reflection prompt of the day
+Daily/Weekly challenges
+Story Highlight: Visualization
+
+List of tips
+History of challenges
+Global history of WTD
