@@ -7,3 +7,7 @@ body{
     height: 100vh;
     overflow: hidden;
 }
+
+.side-nav{
+    min-width: max-content;
+}
