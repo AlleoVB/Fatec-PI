@@ -7,6 +7,10 @@ main{
     height: calc(100vh - 3.5rem);
 }
 
+.side-nav-container{
+    
+}
+
 .side-nav{
     min-width: max-content;
 }
