@@ -25,6 +25,24 @@ main{
     min-width: max-content;
 }
 
+/* .p-card{
+    display: flex;
+} */
+.card-containersize{
+    height: min-content;
+    /* max-height: 60%; */
+}
+
+.grid-set1{
+    grid-template-columns: 1fr 1fr;
+    gap: 5em;
+}
+
+.grid-set2{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+}
+
 .a{
     background-color: blueviolet;
 }
