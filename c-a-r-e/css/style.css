@@ -39,8 +39,10 @@ main{
 }
 
 .grid-set2{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr; */
+    grid-template-rows: repeat(3, 33.33%);
+    height: 100%;
+ 
 }
 
 .a{
