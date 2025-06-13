@@ -1,0 +1,74 @@
+<div class="row">
+          <div class="col">
+            <div class="row rowtd">
+              <div class="col justify-content-center">
+                <div class="container w-50 d-flex flex-column">
+                  <p class="text-center my-0 p-1">a</p>
+                  <div class="card p-2">
+                    <p class="card-text">
+                      Um “Minuto de Reset” (Uma pausa para respirar, matutar,
+                      fazer um café) pode vir a ser revigorante em momentos de
+                      “bloqueio mental”.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row rowtd">
+              <div class="a col">
+                <div class="container d-flex flex-collumn">
+                  <div class="container d-grid grid-set1">
+                    <div class="container">
+                      <p class="container-fluid my-0 p-1">Conteúdo 1</p>
+                      <div class="card cardfix p-2">
+                        <p class="card-text">
+                          “Qual foi o menor gesto de carinho ou gentileza que
+                          você recebeu ou presenciou nos últimos dias? Como isso
+                          te impactou mais do que você esperava?”
+                        </p>
+                      </div>
+                    </div>
+                    <div class="container">
+                      <p class="container-fluid text-end my-0 p-1">
+                        Conteúdo 2
+                      </p>
+                      <div class="card cardfix overflow-y-scroll p-2">
+                        <p class="card-text">
+                          Lorem, ipsum dolor sit amet consectetur adipisicing
+                          elit. Aut deserunt architecto nihil dicta, laborum
+                          nesciunt enim sed obcaecati nostrum, explicabo ducimus
+                          quas amet illo placeat saepe unde excepturi? Libero,
+                          eligendi.Lorem, ipsum dolor sit amet consectetur
+                          adipisicing elit. Aut deserunt architecto nihil dicta,
+                          laborum nesciunt enim sed obcaecati nostrum, explicabo
+                          ducimus quas amet illo placeat saepe unde excepturi?
+                          Libero, eligendi.Lorem, ipsum dolor sit amet
+                          consectetur adipisicing elit. Aut deserunt architecto
+                          nihil dicta, laborum nesciunt enim sed obcaecati
+                          nostrum, explicabo ducimus quas amet illo placeat
+                          saepe unde excepturi? Libero, eligendi.Lorem, ipsum
+                          dolor sit amet consectetur adipisicing elit. Aut
+                          deserunt architecto nihil dicta, laborum nesciunt enim
+                          sed obcaecati nostrum, explicabo ducimus quas amet
+                          illo placeat saepe unde excepturi? Libero,
+                          eligendiLorem, ipsum dolor sit amet consectetur
+                          adipisicing elit. Aut deserunt architecto nihil dicta,
+                          laborum nesciunt enim sed obcaecati nostrum, explicabo
+                          ducimus quas amet illo placeat saepe unde excepturi?
+                          Libero, eligendiLorem, ipsum dolor sit amet
+                          consectetur adipisicing elit. Aut deserunt architecto
+                          nihil dicta, laborum nesciunt enim sed obcaecati
+                          nostrum, explicabo ducimus quas amet illo placeat
+                          saepe unde excepturi? Libero, eligendi
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row rowtd">
+              <div class="col">a</div>
+            </div>
+          </div>
+        </div>

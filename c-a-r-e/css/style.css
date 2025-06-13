@@ -2,48 +2,38 @@
     font-family: ;
     box-sizing: border-box;
 }
+main{
+    height: calc(100vh - 3.5rem);
+}
 
 @media screen and (max-width: 1245px) {
     .minwfix{
         width: 100%;
     }        
-
-    .side-nav{
-        
-    }
 }
 
-main{
-    height: calc(100vh - 3.5rem);
+
+
+.cardfix{
+    height: 60%;
+    border-radius: 1.5rem;
+}
+.cardfix1{
+    border-top-left-radius: 0;
+}
+.cardfix2{
+    border-top-right-radius: 0;
 }
 
-.side-nav-container{
-    
+
+.blocktd{
+    height: 33.33%;
 }
 
-.side-nav{
-    min-width: max-content;
+.dividebl{
+    column-gap: 5rem;
 }
 
-/* .p-card{
-    display: flex;
-} */
-.card-containersize{
-    height: min-content;
-    /* max-height: 60%; */
-}
-
-.grid-set1{
-    grid-template-columns: 1fr 1fr;
-    gap: 5em;
-}
-
-.grid-set2{
-    /* grid-template-columns: 1fr; */
-    grid-template-rows: repeat(3, 33.33%);
-    height: 100%;
- 
-}
 
 .a{
     background-color: blueviolet;
