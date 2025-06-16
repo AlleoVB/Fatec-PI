@@ -6,22 +6,14 @@ main{
     height: calc(100vh - 3.5rem);
 }
 
-@media screen and (max-width: 1245px) {
-    .minwfix{
-        width: 100%;
-    }        
-}
-
-
-
 .cardfix{
     height: 60%;
     border-radius: 1.5rem;
 }
-.cardfix1{
+.cardfixleft{
     border-top-left-radius: 0;
 }
-.cardfix2{
+.cardfixright{
     border-top-right-radius: 0;
 }
 
@@ -32,9 +24,45 @@ main{
 
 .dividebl{
     column-gap: 5rem;
+    row-gap: 1.5rem;
+    margin: 1.5rem;
 }
 
+.dtip{
+    width: 50%;
+}
 
 .a{
     background-color: blueviolet;
+}
+
+
+@media screen and (max-width: 992px) {
+    .dtip{
+        width: 75%;
+    }
+    
+    .blocktd{
+        height: auto;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .cardfix{
+        height: max-content;
+    }
+    
+    .blocktd{
+        height: auto;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 576px) {
+    .dtip{
+        width: auto;
+    }
 }
