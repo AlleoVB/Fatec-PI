@@ -44,8 +44,17 @@
       </nav>
     </header>
     <main class="row">
-      <div class="d-none col-lg-2 pe-0 bg-primary ">
-        <div>
+      <button
+          class="btn btn-danger position-fixed bottom-0 end-0 d-lg-none sidenavToggle"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#sidenavContent"
+          aria-controls="sidenavContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >a</button>
+      <div class="collapse d-lg-flex col-lg-2 pb-5 pe-0 bg-primary text-center text-lg-start sidenav" id="sidenavContent">
+        
           <ul
             class="nav container align-items-md-start px-3 py-4 flex-column"
           >
@@ -64,17 +73,17 @@
               <a class="nav-link py-3 text-danger" href="#">Lista de Dicas</a>
             </li>
           </ul>
-        </div>
+        
       </div>
-      <div class="col-md-12 col-lg-10 ">
+      <div class="col-md-12 col-lg-10 order-first order-lg-last">
         <div class="row h-100 px-3">
           <div class="col">
             <div class="row dividebl blocktd">
-              <div class="col justify-content-center p-sm-5">
+              <div class="col justify-content-center p-sm-4">
                 <div class="container h-100 dtip">
                   <p class="text-center my-1 p-1">Dica do Dia</p>
                     <div class="card cardfix p-2 overflow-y-auto">
-                      <p class="card-text">
+                      <p class="card-text m-auto">
                         Um “Minuto de Reset” (Uma pausa para respirar, matutar,
                         fazer um café) pode vir a ser revigorante em momentos de
                         “bloqueio mental”.
@@ -84,8 +93,8 @@
               </div>
             </div>
             <div class="row flex-column flex-md-row dividebl blocktd">
-              <div class="col ">
-                <div class="container-fluid h-100">
+              <div class="col">
+                <div class="container-fluid sizequalizer">
                   <p class="mb-1">Conteudo1</p>
                   <div class="card cardfix cardfixleft p-2 overflow-y-auto">
                     <p class="card-text">
@@ -96,8 +105,8 @@
                   </div>
                 </div>
               </div>
-              <div class="col ">
-                <div class="container-fluid h-100">
+              <div class="col">
+                <div class="container-fluid sizequalizer">
                   <p class="mb-1 text-end">Conteudo2</p>
                   <div class="card cardfix cardfixright p-2 overflow-y-auto">
                     <p class="card-text">
@@ -110,24 +119,20 @@
               </div>
             </div>
             <div class="row flex-column flex-md-row dividebl blocktd">
-              <div class="col h-100">
-                <div class="container-fluid h-100">
+              <div class="col">
+                <div class="container-fluid sizequalizer">
                   <p class="mb-1">Conteudo1</p>
                   <div class="card cardfix cardfixleft p-2 overflow-y-auto">
                     <p class="card-text">
                           “Qual foi o menor gesto de carinho ou gentileza que
-                          você recebeu ou presenciou nos últimos dias? Como isso
-                          te impactou mais do que você esperava?“Qual foi o menor gesto de carinho ou gentileza que
-                          você recebeu ou presenciou nos últimos dias? Como isso
-                          te impactou mais do que você esperava?“Qual foi o menor gesto de carinho ou gentileza que
                           você recebeu ou presenciou nos últimos dias? Como isso
                           te impactou mais do que você esperava?
                         </p>
                   </div>
                 </div>
               </div>
-              <div class="col h-100">
-                <div class="container-fluid h-100">
+              <div class="col">
+                <div class="container-fluid sizequalizer">
                   <p class="mb-1 text-end">Conteudo2</p>
                   <div class="card cardfix cardfixright p-2 overflow-y-auto">
                     <p class="card-text">

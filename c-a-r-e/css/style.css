@@ -25,12 +25,20 @@ main{
 .dividebl{
     column-gap: 5rem;
     row-gap: 1.5rem;
-    margin: 1.5rem;
+    padding: 1.5rem;
 }
 
 .dtip{
-    width: 50%;
+    width: 65%;
 }
+
+.sidenavToggle{
+    z-index: 10;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+
 
 .a{
     background-color: blueviolet;
@@ -38,6 +46,17 @@ main{
 
 
 @media screen and (max-width: 992px) {
+    p{
+        font-size: 14px;
+    }
+    
+    .sidenav{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 9;
+    }
+  
     .dtip{
         width: 75%;
     }
@@ -45,6 +64,10 @@ main{
     .blocktd{
         height: auto;
     }
+
+    .cardfix{
+        height: max-content;
+    }    
 }
 
 
@@ -62,6 +85,11 @@ main{
 
 
 @media screen and (max-width: 576px) {
+    
+    p{
+        font-size: 12px;
+    }
+
     .dtip{
         width: auto;
     }
