@@ -1,0 +1,119 @@
+
+-- --------------------
+-- TABELAS
+-- --------------------
+
+CREATE TABLE Usuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    senhaHash VARCHAR(255) NOT NULL,
+    isAdmin BOOLEAN DEFAULT FALSE,
+    criacaoConta DATETIME DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE Pergunta (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    texto TEXT NOT NULL,
+    ordem INT
+);
+
+CREATE TABLE Alternativa (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    texto VARCHAR(255) NOT NULL,
+    perguntaId INT,
+    FOREIGN KEY (perguntaId) REFERENCES Pergunta(id)
+);
+
+CREATE TABLE RespostaUsuario (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuarioId INT,
+    alternativaId INT,
+    dataPreenchimento DATETIME DEFAULT CURRENT_TIMESTAMP,
+    ativo BOOLEAN DEFAULT TRUE,
+    FOREIGN KEY (usuarioId) REFERENCES Usuario(id),
+    FOREIGN KEY (alternativaId) REFERENCES Alternativa(id)
+);
+
+CREATE TABLE Conteudo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    titulo VARCHAR(255) NOT NULL,
+    descricao TEXT,
+    tipo ENUM('dica', 'desafio', 'reflexao', 'outro') NOT NULL,
+    periodico ENUM('diario', 'semanal') NOT NULL,
+    url TEXT,
+    usuarioId INT,
+    dataCriacao DATETIME DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (usuarioId) REFERENCES Usuario(id)
+);
+
+CREATE TABLE ConteudoAlvo (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    conteudoId INT,
+    alternativaId INT,
+    FOREIGN KEY (conteudoId) REFERENCES Conteudo(id),
+    FOREIGN KEY (alternativaId) REFERENCES Alternativa(id)
+);
+
+CREATE TABLE ConteudoEntrega (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    usuarioId INT,
+    conteudoId INT,
+    dataEntrega DATETIME DEFAULT CURRENT_TIMESTAMP,
+    repetir BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (usuarioId) REFERENCES Usuario(id),
+    FOREIGN KEY (conteudoId) REFERENCES Conteudo(id)
+);
+
+-- --------------------
+-- TRIGGER
+-- --------------------
+
+DELIMITER //
+CREATE TRIGGER before_insert_resposta
+BEFORE INSERT ON RespostaUsuario
+FOR EACH ROW
+BEGIN
+    UPDATE RespostaUsuario SET ativo = FALSE 
+    WHERE usuarioId = NEW.usuarioId AND ativo = TRUE;
+END;
+//
+DELIMITER ;
+
+-- --------------------
+-- PROCEDURES
+-- --------------------
+
+DELIMITER //
+CREATE PROCEDURE CriarConta(IN p_nome VARCHAR(100), IN p_email VARCHAR(100), IN p_senhaHash VARCHAR(255))
+BEGIN
+    INSERT INTO Usuario (nome, email, senhaHash) VALUES (p_nome, p_email, p_senhaHash);
+END;
+//
+
+CREATE PROCEDURE EntrarConta(IN p_email VARCHAR(100), IN p_senhaHash VARCHAR(255))
+BEGIN
+    SELECT id, nome, isAdmin FROM Usuario WHERE email = p_email AND senhaHash = p_senhaHash;
+END;
+//
+
+CREATE PROCEDURE ResponderSurvey(IN p_usuarioId INT, IN p_alternativaId INT)
+BEGIN
+    INSERT INTO RespostaUsuario (usuarioId, alternativaId) VALUES (p_usuarioId, p_alternativaId);
+END;
+//
+
+CREATE PROCEDURE AdicionarConteudo(
+    IN p_titulo VARCHAR(255),
+    IN p_descricao TEXT,
+    IN p_tipo ENUM('dica', 'desafio', 'reflexao', 'outro'),
+    IN p_periodico ENUM('diario', 'semanal'),
+    IN p_url TEXT,
+    IN p_usuarioId INT
+)
+BEGIN
+    INSERT INTO Conteudo (titulo, descricao, tipo, periodico, url, usuarioId)
+    VALUES (p_titulo, p_descricao, p_tipo, p_periodico, p_url, p_usuarioId);
+END;
+//
+DELIMITER ;
