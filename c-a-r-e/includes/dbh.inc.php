@@ -1,12 +1,14 @@
 <?php
 
-    $dsn = "mysql:host=localhost;dbname=caredata";
+    $host = 'localhost';
+    $dbname = 'caredata';
+    $dsn = "mysql:host=$host;dbname=$dbname";
     $dbusername = "root";
     $dbpassword = "";
 
     try {
         $pdo = new PDO($dsn, $dbusername, $dbpassword);
-        $pdo->setAttribute(PDO::ATTR_ERRORMODE, PDO::ERRMODE_EXCEPTION);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (PDOException $e) {
-        echo "Connection failed: " . $e->getMessage();
+        die("Connection failed: " . $e->getMessage());
     }
