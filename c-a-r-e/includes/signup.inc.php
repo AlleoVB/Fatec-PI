@@ -35,6 +35,7 @@
                     'username' => $username,
                     'email' => $email
                 ];
+                $_SESSION['signupData'] = $signupData;
 
                 header("Location: ../index.php");
                 die();
