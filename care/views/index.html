@@ -1,0 +1,103 @@
+<main class="d-flex justify-content-center">
+  <div class="col-10">
+    <div class="d-flex flex-column justify-content-center row-gap-4 h-100 ">
+      <div class="container-fluid">
+        <h1 class="mx-auto mainlogo" style="display: flex; justify-content: center; align-items: center; max-width: 40rem; height: 20rem">
+          C.A.R.E.
+        </h1>
+      </div>
+      <div class="container-fluid">
+        <p class="mx-auto" style="width: fit-content">
+          Clarity, Awareness, Reflection, Embodiment
+        </p>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- Modal Login/Signup -->
+<div
+  class="modal fade"
+  id="loginModal"
+  tabindex="-1"
+  aria-labelledby="loginModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content p-3">
+      <button
+        type="button"
+        class="btn-close position-absolute top-0 end-0 mt-3 me-3"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+      <div class="row justify-content-center">
+        <div class="col-md-6 login-area">
+          <h3 class="text-center">Login</h3>
+          <form>
+            <div class="mb-3">
+              <label for="loginEmail" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="loginEmail"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="loginPassword" class="form-label">Senha</label>
+              <input
+                type="password"
+                class="form-control"
+                id="loginPassword"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Entrar</button>
+            <p class="text-center mt-3">
+              Não tem uma conta? <a href="#" id="showSignup">Cadastre-se</a>
+            </p>
+          </form>
+        </div>
+        <div class="col-md-6 signup-area d-none">
+          <h3 class="text-center">Cadastro</h3>
+          <form action="../controllers/SignupController.class.php" method="POST">
+            <div class="mb-3">
+              <label for="signupName" class="form-label">Nome</label>
+              <input
+                type="text"
+                class="form-control"
+                id="signupName"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="signupEmail" class="form-label">Email</label>
+              <input
+                type="email"
+                class="form-control"
+                id="signupEmail"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="signupPassword" class="form-label">Senha</label>
+              <input
+                type="password"
+                class="form-control"
+                id="signupPassword"
+                required
+              />
+            </div>
+            <button type="submit" class="btn btn-success w-100">
+              Cadastrar
+            </button>
+            <p class="text-center mt-3">
+              Já tem uma conta? <a href="#" id="showLogin">Entrar</a>
+            </p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

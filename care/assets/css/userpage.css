@@ -1,9 +1,5 @@
-*{
-    font-family: ;
-    box-sizing: border-box;
-}
-main{
-    height: calc(100vh - 3.5rem);
+.card-default {
+    background-color: var(--secondary-300);
 }
 
 .cardfix{
@@ -29,33 +25,12 @@ main{
 }
 
 .dtip{
+    
     width: 65%;
-}
-
-.sidenavToggle{
-    z-index: 10;
-    border-bottom-left-radius: 0;
-    border-bottom-right-radius: 0;
-}
-
-
-
-.a{
-    background-color: blueviolet;
 }
 
 
 @media screen and (max-width: 992px) {
-    p{
-        font-size: 14px;
-    }
-    
-    .sidenav{
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 9;
-    }
   
     .dtip{
         width: 75%;
@@ -85,10 +60,6 @@ main{
 
 
 @media screen and (max-width: 576px) {
-    
-    p{
-        font-size: 12px;
-    }
 
     .dtip{
         width: auto;

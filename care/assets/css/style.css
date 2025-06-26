@@ -1,0 +1,120 @@
+:root {
+  /* Dark Theme Base */
+  --dark-900: #000000;
+  --dark-800: #2a2a2a;
+  --dark-700: #3d3d3d;
+
+  /* Primary - Tons de Azul Claro */
+  --primary-main: #1bb9fa;
+  --primary-100: #c3eeff;
+  --primary-200: #97e2ff;
+  --primary-300: #5cd1ff;
+  --primary-400: #1bb9fa;
+
+  --primary-gradient-start: #1bb9fa;
+  --primary-gradient-end: #c3eeff;
+
+  /* Secondary - Tons Pêssego/Rosa Claro */
+  --secondary-main: #fff3f3;
+  --secondary-100: #fbfeff;
+  --secondary-200: #fff3f3;
+  --secondary-300: #ffd9cd;
+  --secondary-400: #e0a08c;
+
+  --secondary-gradient-start: #e0a08c;
+  --secondary-gradient-end: #fff3f3;
+
+  /* Tertiary 1 – Azul Esverdeado */
+  --tertiary1-main: #1bfaf4;
+  --tertiary1-100: #a6fffc;
+  --tertiary1-200: #70fffa;
+  --tertiary1-300: #5cd1cd;
+
+  --tertiary1-gradient-start: #1bfaf4;
+  --tertiary1-gradient-end: #a6fffc;
+
+  /* Tertiary 2 – Verde Água */
+  --tertiary2-main: #1bfaa8;
+  --tertiary2-100: #afffe2;
+  --tertiary2-200: #75ffcd;
+  --tertiary2-300: #53b591;
+
+  --tertiary2-gradient-start: #1bfaa8;
+  --tertiary2-gradient-end: #afffe2;
+
+  /* Utilitárias */
+  --text-light: #ffffff;
+  --text-dark: #111111;
+  --bg-light: #f8f9fa;
+  --bg-dark: #212529;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  font-family: "Poppings", Arial, Helvetica, sans-serif ;
+  box-sizing: border-box;
+}
+
+.headlines, h1{
+  font-family: "Cormorant Garamond", 'Times New Roman', Times, serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+main {
+  height: calc(100vh - 3.9rem);
+}
+
+.body-guest {
+  background-color: var(--primary-100);
+}
+.body-authenticated {
+  background-color: var(--secondary-main);
+}
+.header-default {
+  background-color: var(--primary-main);
+}
+.sidenav-default{
+    background-color: var(--primary-200);
+}
+
+.sidenavToggle {
+  z-index: 10;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.sidenav {
+  min-height: 100%;
+  border-radius: 0 8px 8px 0;
+}
+
+@media screen and (max-width: 992px) {
+  .headlines, h1{
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .sidenav {
+    min-height: auto;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+
+  }
+}
+
+@media screen and (max-width: 576px) {
+  p {
+    font-size: 12px;
+  }
+}
