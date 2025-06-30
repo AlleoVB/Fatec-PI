@@ -2,19 +2,21 @@
 
 class SignupController
 {
-    public function signup($username, $email, $senha)
+    public static function validarCadastro($nome, $email, $senha): ?string
     {
-
-        $usuarioData = new Usuario(0, $username, $email, $senha);
-        $usuarioRegistroDAO = new UsuarioDAO();
-        $registrado = $usuarioRegistroDAO->buscarPorEmail($email);
-        
-
-        if (!$registrado) {
-            $usuarioRegistroDAO->inserir($usuarioData);
-            header("Location: painel.php");
-        } else {
-            echo "Login inválido.";
+        if (!$nome || !$email || !$senha) {
+            return 'NED'; //Not Enough Data
         }
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            return 'NaE'; //Not a Email
+        }
+
+        if ((new UsuarioDAO())->buscarPorEmail($email)) {
+            return 'EAE'; //Email Already Exists
+        }
+
+        return 'AOK'; // tudo ok
     }
+
 }

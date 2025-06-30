@@ -33,6 +33,7 @@ $route = new Rotas();
 
 // Público
 $route->get("/", [HomeController::class, "inicio"]);
+$route->post("/", [HomeController::class, "inicio"]);
 $route->get("/login", [LoginController::class, "formLogin"]);
 $route->post("/login", [LoginController::class, "login"]);
 $route->get("/cadastro", [UsuarioController::class, "formCadastro"]);

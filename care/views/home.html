@@ -34,7 +34,7 @@
       <div class="row justify-content-center">
         <div class="col-md-6 login-area">
           <h3 class="text-center">Login</h3>
-          <form>
+          <form action="/care/painel">
             <div class="mb-3">
               <label for="loginEmail" class="form-label">Email</label>
               <input
@@ -61,12 +61,14 @@
         </div>
         <div class="col-md-6 signup-area d-none">
           <h3 class="text-center">Cadastro</h3>
-          <form action="../controllers/SignupController.class.php" method="POST">
+          <form action="" method="POST">
+            <input type="hidden" name="acao" value="cadastrar">
             <div class="mb-3">
               <label for="signupName" class="form-label">Nome</label>
               <input
                 type="text"
                 class="form-control"
+                name="nome"
                 id="signupName"
                 required
               />
@@ -76,6 +78,7 @@
               <input
                 type="email"
                 class="form-control"
+                name="email"
                 id="signupEmail"
                 required
               />
@@ -85,6 +88,7 @@
               <input
                 type="password"
                 class="form-control"
+                name="senha"
                 id="signupPassword"
                 required
               />
