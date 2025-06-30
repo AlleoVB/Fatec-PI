@@ -15,6 +15,33 @@
   </div>
 </main>
 
+<!-- Toast Errors/Messages -->
+<?php if (!empty($erro)) : ?>
+<div class="position-fixed top-50 start-50 translate-middle" style="z-index: 1100;">
+  <div class="toast align-items-center text-bg-danger border-0 show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        <?= htmlspecialchars($erro) ?>
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+<?php endif; ?>
+
+<?php if (!empty($mensagem)) : ?>
+<div class="position-fixed top-50 start-50 translate-middle" style="z-index: 1100;">
+  <div class="toast align-items-center text-bg-success border-0 show" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+        <?= htmlspecialchars($mensagem) ?>
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
+  </div>
+</div>
+<?php endif; ?>
+
 <!-- Modal Login/Signup -->
 <div
   class="modal fade"
@@ -34,7 +61,7 @@
       <div class="row justify-content-center">
         <div class="col-md-6 login-area">
           <h3 class="text-center">Login</h3>
-          <form action="/care/painel">
+          <form action="" method="POST">
             <div class="mb-3">
               <label for="loginEmail" class="form-label">Email</label>
               <input

@@ -47,19 +47,31 @@ class HomeController
                 $email = $_POST['email'] ?? "";
                 $senha = $_POST['senha'] ?? "";
 
-                if ($email && $senha) {
-                    $usuario = (new UsuarioDAO())->buscarPorEmail($email);
-                    if ($usuario && password_verify($senha, $usuario->getSenhaHash())) {
-                        // login ok
-                        $_SESSION['user_id'] = $usuario->getId();
-                        header("Location: /care/painel");
-                        exit;
-                    } else {
-                        $erro = "E-mail ou senha inválidos!";
-                    }
-                } else {
-                    $erro = "Preencha e-mail e senha!";
+                switch (LoginController::validarLogin($nome, $email, $senha)) {
+
+                    case 'NED':
+                        $erro = "Preencha todos os campos!";
+                        break;
+
+                    case 'NaE':
+                        $erro = "E-mail inválido!";
+                        break;
+
+                    case 'UNF':
+                        $erro = "Email ou senha invalidos!";
+                        break;
+
+                    case 'AOK':
+                        LoginController::login($email, $senha);
+                        break;
+
+                    default:
+                        $erro = "Falha no login!";
+                        break;
                 }
+                
+
+                
             }
         }
 
